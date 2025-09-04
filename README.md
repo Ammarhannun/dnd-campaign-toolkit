@@ -20,6 +20,81 @@ It is built to be modular, so you can use only what you need or expand it with h
 - **Campaign Log**: Keep notes, track sessions, and export summaries.  
 - **Customisation**: Add homebrew monsters, magic items, and house rules.  
 
+## Project Structure (selected files)
+
+```
+src/
+├─ (package) dungeonmania/
+│  ├─ BattleFacade.java
+│  ├─ BattleRound.java
+│  ├─ BattleStatistics.java
+│  ├─ Buildable.java
+│  ├─ Door.java
+│  ├─ DungeonManiaController.java            # primary public API
+│  ├─ Enemy.java
+│  ├─ Entity.java
+│  ├─ EntityFactory.java
+│  ├─ Exit.java
+│  ├─ Game.java
+│  ├─ GameBuilder.java
+│  ├─ Inventory.java
+│  ├─ InventoryItem.java
+│  ├─ Player.java
+│  ├─ Portal.java
+│  ├─ Potion.java
+│  ├─ PotionListener.java
+│  ├─ Recipe.java
+│  ├─ Sceptre.java
+│  ├─ Shield.java
+│  ├─ Switch.java
+│  ├─ Sword.java
+│  ├─ Treasure.java
+│  ├─ Useable.java
+│  ├─ Wall.java
+│  ├─ Wood.java
+│  │
+│  ├─ # Enemies (Slime system and others)
+│  ├─ BlueSlime.java
+│  ├─ GreenSlime.java
+│  ├─ RedSlime.java
+│  ├─ Slime.java
+│  ├─ SlimeManager.java
+│  ├─ Spider.java
+│  ├─ ZombieToast.java
+│  ├─ ZombieToastSpawner.java
+│  │
+│  ├─ # Movement strategies
+│  ├─ MoveAllied.java
+│  ├─ MoveEnemy.java
+│  ├─ MoveHostile.java
+│  ├─ MoveInvincible.java
+│  ├─ MoveRandom.java
+│  ├─ MoveRunaway.java
+│  │
+│  ├─ # Items / Crafting
+│  ├─ Bomb.java
+│  ├─ Boulder.java
+│  ├─ Bow.java
+│  ├─ BowRecipe.java
+│  ├─ BuffAndDurability.java
+│  ├─ InvisibilityPotion.java
+│  ├─ MidnightArmour.java
+│  ├─ Sceptre.java
+│  ├─ Shield.java
+│  ├─ ShieldRecipe.java
+│  ├─ SunStone.java
+│  │
+│  ├─ # Misc
+│  ├─ ColorCodedType.java
+│  ├─ ComparableCallback.java
+│  ├─ EntityFactory.java
+│  └─ Key.java
+└─ test/
+   └─ (JUnit 5 test files for enemy behaviour, movement, battle, and items)
+```
+
+> The file list above mirrors the flat listing you provided; in the codebase these should live under a package (e.g., `dungeonmania` or similar).
+
 ---
 
 ## Roadmap
